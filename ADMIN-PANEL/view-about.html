@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View About</title>
+    <link rel="shortcut icon" href="./images/Favicon.png" type="image/x-icon" />
+
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <link rel="stylesheet" href="./assests/css/main-admin-style.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo-details">
+        <span class="logo_name"
+          ><a href="./add_blog.html"
+            ><img src="./images/logo.png" alt="" style="width: 175px" /> </a
+        ></span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="./view-blog.html"
+            ><i class="fas fa-blog"></i> <span class="link_name">Blog</span></a
+          >
+        </li>
+        <li>
+          <a href="./view-about.html"
+            ><i class="far fa-address-book"></i>
+            <span class="link_name">About</span></a
+          >
+        </li>
+        <li>
+          <a href="./intro.html"
+            ><i class="far fa-address-card"></i>
+            <span class="link_name">Introduction</span></a
+          >
+        </li>
+        <li>
+          <a href="./view-scores.html"
+            ><i class="far fa-eye"></i>
+            <span class="link_name">View Scores</span></a
+          >
+        </li>
+        <li>
+          <a href="./view-contact.html"
+            ><i class="far fa-eye"></i>
+            <span class="link_name">View Contact</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- ///////////////////////////////////////// -->
+
+    <div class="home-content">
+      <div class="toggle bx-menu1" onclick="myFunction()" id="toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <img src="./images/logo.png" alt="" id="logo" />
+      <div class="btns">
+        <a href="login.html"><button>LogOut</button></a>
+        <!-- <a href="register.html"><button>Register</button></a> -->
+      </div>
+    </div>
+    <!-- //////////////////////////// -->
+
+    <div class="view_blog">
+      <div class="title">
+        <h5><b>View</b> About</h5>
+        <a href="./about_form.html"> <button>Add New</button></a>
+      </div>
+      <table>
+        <thead>
+          <th>Title</th>
+          <th>Description</th>
+
+          <th>Status</th>
+
+          <th>Update</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Title">Speed1</td>
+            <td data-label="DESC">
+              The CPS Test is a free click per second test, which measures your
+              mouse clicking speed in given time frame. Playing the CPS test
+              game is easy and fun at the same time. The game is suitable for
+              all age groups, so don't worry if you are just a high school
+              student or a person with a corporate job. Have you wondered how
+              many mouse clicks can you accomplish in thirty seconds? Well, many
+              might not even know if there is a way to calculate such an
+              atypical activity. It might come as a surprise that not only there
+              is a way to calculate the number of clicks per given timeframe but
+              also many users play the game and compete globally.
+            </td>
+
+            <td data-label="Status">
+              <select>
+                <option>Active</option>
+                <option>Disable</option>
+                <!-- <option>Expired</option> -->
+              </select>
+            </td>
+
+            <td data-label="Update">
+              <i class="fas fa-edit" style="color: blue"></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ///////////////////////////////////////////// -->
+
+    <!-- script  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./assests/js/admin-panel.js"></script>
+  </body>
+</html>

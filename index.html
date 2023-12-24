@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speed Test</title>
+    <link rel="shortcut icon" href="./images/Favicon.png" type="image/x-icon" />
+
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/speed_test.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <ul class="nav-links">
+        <li>
+          <a href="./index.html"
+            ><i class="fas fa-home"></i> <span class="link_name">Home</span></a
+          >
+        </li>
+        <li>
+          <a href="./blog.html"
+            ><i class="fas fa-blog"></i> <span class="link_name">Blog</span></a
+          >
+        </li>
+        <li>
+          <a href="./about.html"
+            ><i class="far fa-address-book"></i>
+            <span class="link_name">About Us</span></a
+          >
+        </li>
+        <li>
+          <a href="./contact.html"
+            ><i class="far fa-address-card"></i>
+            <span class="link_name">Contact Us</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- ///////////////////////////////////////// -->
+
+    <div class="home-content">
+      <div class="toggle bx-menu1" onclick="myFunction()" id="toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <a href="./index.html"
+        ><img src="./images/logo.png" alt="" id="logo"
+      /></a>
+
+      <div class="btns">
+        <div class="account">
+          <img src="./images/pic1.jpg" alt="" />
+        </div>
+        <div class="account-section">
+          <ul>
+            <li><a href="./my_profile.html">My Profile</a></li>
+            <li><a href="#">Logout</a></li>
+          </ul>
+        </div>
+        <a href="login.html"><button>Login</button></a>
+        <a href="register.html"><button>Register</button></a>
+      </div>
+    </div>
+    <!-- //////////////////////////// -->
+    <div class="main-home-section">
+      <div class="top-ad">
+        <h1>Adsense Ad</h1>
+      </div>
+
+      <div class="main-home-area">
+        <div class="main-panel">
+          <div class="content" id="star_anim">
+            <div class="page-inner mt--5">
+              <div class="row">
+                <div class="col-md-12 mx-auto">
+                  <div class="card full-height">
+                    <div class="card-body">
+                      <div class="row col-md-12">
+                        <div class="col-md-4">
+                          <div class="p-3 card gradient-deepblue">
+                            <span class="h4 font-weight-bold" id="timer"
+                              >05:00</span
+                            >
+                            <small class="mb-0 sm-custom font-weight-bold"
+                              >Timer</small
+                            >
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="p-3 card gradient-orange">
+                            <span class="h4 font-weight-bold" id="clicks"
+                              >0</span
+                            >
+                            <small class="mb-0 sm-custom font-weight-bold"
+                              >Click/s</small
+                            >
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="p-3 card gradient-ohhappiness">
+                            <span class="h4 font-weight-bold" id="score"
+                              >0</span
+                            >
+                            <small class="mb-0 sm-custom font-weight-bold"
+                              >Score</small
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div
+                          class="col-md-3"
+                          id="box_left_click"
+                          style="display: none"
+                        >
+                          <div class="p-3 card bg_click">
+                            <span
+                              class="h4 font-weight-bold"
+                              id="left_click_count"
+                              >0</span
+                            >
+                            <small class="mb-0 sm-custom font-weight-bold"
+                              >Left Click</small
+                            >
+                          </div>
+                        </div>
+                        <div
+                          class="col-md-3"
+                          id="box_middle_click"
+                          style="display: none"
+                        >
+                          <div class="p-3 card bg_click">
+                            <span
+                              class="h4 font-weight-bold"
+                              id="middle_click_count"
+                              >0</span
+                            >
+                            <small class="mb-0 sm-custom font-weight-bold"
+                              >Middle Click</small
+                            >
+                          </div>
+                        </div>
+                        <div
+                          class="col-md-3"
+                          id="box_right_click"
+                          style="display: none"
+                        >
+                          <div class="p-3 card bg_click">
+                            <span
+                              class="h4 font-weight-bold"
+                              id="right_click_count"
+                              >0</span
+                            >
+                            <small class="mb-0 sm-custom font-weight-bold"
+                              >Right Click</small
+                            >
+                          </div>
+                        </div>
+                        <div
+                          class="col-md-3"
+                          id="box_double_click"
+                          style="display: none"
+                        >
+                          <div class="p-3 card bg_click">
+                            <span
+                              class="h4 font-weight-bold"
+                              id="double_click_count"
+                              >0</span
+                            >
+                            <small class="mb-0 sm-custom font-weight-bold"
+                              >Double Click</small
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-body p-0">
+                          <button
+                            class="btn btn-info btn-sm btn-block font-weight-bold"
+                            id="setting_sound"
+                            data-play="notplaysound"
+                          >
+                            <span id="sound_icon_play" style="display: none">
+                              <svg
+                                aria-hidden="true"
+                                data-prefix="fas"
+                                data-icon="volume-up"
+                                class="svg-inline--fa fa-sliders-h fa-w-16 icon_set"
+                                role="img"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 576 512"
+                              >
+                                <path
+                                  fill="currentColor"
+                                  d="M215.03 71.05L126.06 160H24c-13.26 0-24 10.74-24 24v144c0 13.25 10.74 24 24 24h102.06l88.97 88.95c15.03 15.03 40.97 4.47 40.97-16.97V88.02c0-21.46-25.96-31.98-40.97-16.97zm233.32-51.08c-11.17-7.33-26.18-4.24-33.51 6.95-7.34 11.17-4.22 26.18 6.95 33.51 66.27 43.49 105.82 116.6 105.82 195.58 0 78.98-39.55 152.09-105.82 195.58-11.17 7.32-14.29 22.34-6.95 33.5 7.04 10.71 21.93 14.56 33.51 6.95C528.27 439.58 576 351.33 576 256S528.27 72.43 448.35 19.97zM480 256c0-63.53-32.06-121.94-85.77-156.24-11.19-7.14-26.03-3.82-33.12 7.46s-3.78 26.21 7.41 33.36C408.27 165.97 432 209.11 432 256s-23.73 90.03-63.48 115.42c-11.19 7.14-14.5 22.07-7.41 33.36 6.51 10.36 21.12 15.14 33.12 7.46C447.94 377.94 480 319.54 480 256zm-141.77-76.87c-11.58-6.33-26.19-2.16-32.61 9.45-6.39 11.61-2.16 26.2 9.45 32.61C327.98 228.28 336 241.63 336 256c0 14.38-8.02 27.72-20.92 34.81-11.61 6.41-15.84 21-9.45 32.61 6.43 11.66 21.05 15.8 32.61 9.45 28.23-15.55 45.77-45 45.77-76.88s-17.54-61.32-45.78-76.86z"
+                                ></path></svg
+                            ></span>
+                            <span id="sound_icon_notplay">
+                              <svg
+                                aria-hidden="true"
+                                focusable="false"
+                                data-prefix="fas"
+                                data-icon="volume-mute"
+                                class="svg-inline--fa fa-sliders-h fa-w-16 icon_set"
+                                role="img"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512"
+                              >
+                                <path
+                                  fill="currentColor"
+                                  d="M215.03 71.05L126.06 160H24c-13.26 0-24 10.74-24 24v144c0 13.25 10.74 24 24 24h102.06l88.97 88.95c15.03 15.03 40.97 4.47 40.97-16.97V88.02c0-21.46-25.96-31.98-40.97-16.97zM461.64 256l45.64-45.64c6.3-6.3 6.3-16.52 0-22.82l-22.82-22.82c-6.3-6.3-16.52-6.3-22.82 0L416 210.36l-45.64-45.64c-6.3-6.3-16.52-6.3-22.82 0l-22.82 22.82c-6.3 6.3-6.3 16.52 0 22.82L370.36 256l-45.63 45.63c-6.3 6.3-6.3 16.52 0 22.82l22.82 22.82c6.3 6.3 16.52 6.3 22.82 0L416 301.64l45.64 45.64c6.3 6.3 16.52 6.3 22.82 0l22.82-22.82c6.3-6.3 6.3-16.52 0-22.82L461.64 256z"
+                                ></path></svg
+                            ></span>
+                            Play Sound on Clicks
+                          </button>
+                          <div class="row">
+                            <div class="col-md-9">
+                              <div
+                                id="clickarea"
+                                class="btn myRipple mt-2"
+                                style="z-index: 2"
+                              >
+                                <!-- Graph Preview -->
+                                <div
+                                  style="
+                                    height: 330px !important;
+                                    width: 100%;
+                                    position: absolute;
+                                    padding: 20px;
+                                    z-index: -1;
+                                  "
+                                  id="box_graph"
+                                  style="display: none"
+                                >
+                                  <canvas id="myChart"></canvas>
+                                </div>
+                                <button
+                                  class="btn btn-success btn-border"
+                                  id="start"
+                                  type="button"
+                                  style="cursor: crosshair !important"
+                                >
+                                  <span id="start-btn"> START TEST</span>
+                                </button>
+                                <button
+                                  class="btn btn-warning btn-border"
+                                  id="start_again"
+                                  type="button"
+                                  style="
+                                    display: none;
+                                    cursor: crosshair !important;
+                                  "
+                                  onclick="if (!window.__cfRLUnblockHandlers) return false; window.location.reload();"
+                                  data-cf-modified-d9a9eff697cbe424e56c8c08-=""
+                                >
+                                  START TEST AGAIN
+                                </button>
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="card mt-2">
+                                <div class="card-body p-0">
+                                  <ul class="list-group list-group-bordered">
+                                    <li
+                                      class="list-group-item border-0 btn-sm"
+                                      id="click_btn"
+                                    >
+                                      <span
+                                        style="
+                                          font-size: 20px;
+                                          font-weight: bold;
+                                        "
+                                        >Timer</span
+                                      >
+                                    </li>
+                                    <li
+                                      class="btn btn-success btn-border mt-2 list-group-item"
+                                      onclick="if (!window.__cfRLUnblockHandlers) return false; setduration(01);"
+                                      data-cf-modified-d9a9eff697cbe424e56c8c08-=""
+                                    >
+                                      1 Second
+                                    </li>
+                                    <li
+                                      class="btn btn-success btn-border mt-2 list-group-item"
+                                      onclick="if (!window.__cfRLUnblockHandlers) return false; setduration(2);"
+                                      data-cf-modified-d9a9eff697cbe424e56c8c08-=""
+                                    >
+                                      2 Second
+                                    </li>
+                                    <li
+                                      class="btn btn-success btn-border mt-2 list-group-item"
+                                      onclick="if (!window.__cfRLUnblockHandlers) return false; setduration(5);"
+                                      data-cf-modified-d9a9eff697cbe424e56c8c08-=""
+                                    >
+                                      5 Second
+                                    </li>
+                                    <li
+                                      class="btn btn-success btn-border mt-2 list-group-item"
+                                      onclick="if (!window.__cfRLUnblockHandlers) return false; setduration(10);"
+                                      data-cf-modified-d9a9eff697cbe424e56c8c08-=""
+                                    >
+                                      10 Second
+                                    </li>
+                                    <li
+                                      class="btn btn-success btn-border mt-2 list-group-item"
+                                      onclick="if (!window.__cfRLUnblockHandlers) return false; setduration(30);"
+                                      data-cf-modified-d9a9eff697cbe424e56c8c08-=""
+                                    >
+                                      30 Second
+                                    </li>
+                                    <li
+                                      class="btn btn-success btn-border mt-2 list-group-item"
+                                      onclick="if (!window.__cfRLUnblockHandlers) return false; setmanualduration();"
+                                      data-cf-modified-d9a9eff697cbe424e56c8c08-=""
+                                    >
+                                      Custom Time
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="modal fade"
+            id="result_model"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="result_model"
+            aria-hidden="true"
+            data-backdrop="static"
+            data-keyboard="false"
+          >
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content" style="background: #02d4e3">
+                <div class="modal-header" style="border-bottom: none">
+                  <h5 class="modal-title text-white font-weight-bold">
+                    Your CPS Score
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body text-center text-white">
+                  <div id="scro-panel" class="row">
+                    <div
+                      class="col-md-3 p-3"
+                      style="border-right: 3px solid #ffffff"
+                    >
+                      <img
+                        id="rank-img"
+                        class="img-fluid"
+                        src="img/turtle.svg"
+                        alt="rank turtle"
+                        width="200"
+                        height="200"
+                      />
+                    </div>
+                    <div class="col-md-9 p-3">
+                      <p style="font-size: 28px; font-weight: bold">
+                        You Rank is <span id="rank-title">Cooter!</span>
+                      </p>
+                      <p style="font-size: 15px; font-weight: bold">
+                        You Clicked with the speed of
+                        <span id="rank-score">4.40</span> CPS.
+                      </p>
+                      <p style="font-size: 15px; font-weight: bold">
+                        <span id="rank-no-clicks">22</span> Clicks in
+                        <span id="rank-time">5</span> Second(s)
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p
+                        style="font-size: 20px; font-style: italic"
+                        id="motivation-text"
+                      >
+                        “Dont Shy away from working hard, Keep Practicing for
+                        Better Results”
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <div style="float: left">
+                    <a
+                      rel="nofollow noreferrer noopener"
+                      id="fb_share_btn"
+                      target="_blank"
+                      class="social-share-button"
+                      href="#"
+                    >
+                      <svg
+                        style="margin: auto; width: 30px; height: 30px"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 320 512"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+                          fill="white"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a
+                      rel="nofollow noreferrer noopener"
+                      id="twitter_share_btn"
+                      target="_blank"
+                      class="social-share-button"
+                      href="#"
+                    >
+                      <svg
+                        style="margin: auto; width: 30px; height: 30px"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                        aria-hidden="true"
+                      >
+                        <path
+                          fill="white"
+                          d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a
+                      rel="nofollow noreferrer noopener"
+                      id="whatsapp_share_btn"
+                      target="_blank"
+                      class="social-share-button"
+                      href="#"
+                      data-action="share/whatsapp/share"
+                    >
+                      <svg
+                        style="margin: auto; width: 30px; height: 30px"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="white"
+                          d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
+                        ></path>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="ml-auto">
+                    <a href="index.html" class="social-share-button">
+                      <svg
+                        style="margin: auto; width: 30px; height: 30px"
+                        aria-hidden="true"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          fill="white"
+                          d="M370.72 133.28C339.458 104.008 298.888 87.962 255.848 88c-77.458.068-144.328 53.178-162.791 126.85-1.344 5.363-6.122 9.15-11.651 9.15H24.103c-7.498 0-13.194-6.807-11.807-14.176C33.933 94.924 134.813 8 256 8c66.448 0 126.791 26.136 171.315 68.685L463.03 40.97C478.149 25.851 504 36.559 504 57.941V192c0 13.255-10.745 24-24 24H345.941c-21.382 0-32.09-25.851-16.971-40.971l41.75-41.749zM32 296h134.059c21.382 0 32.09 25.851 16.971 40.971l-41.75 41.75c31.262 29.273 71.835 45.319 114.876 45.28 77.418-.07 144.315-53.144 162.787-126.849 1.344-5.363 6.122-9.15 11.651-9.15h57.304c7.498 0 13.194 6.807 11.807 14.176C478.067 417.076 377.187 504 256 504c-66.448 0-126.791-26.136-171.315-68.685L48.97 471.03C33.851 486.149 8 475.441 8 454.059V320c0-13.255 10.745-24 24-24z"
+                        ></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="modal fade"
+            id="manual_duration_model"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="manual_duration_model"
+            aria-hidden="true"
+            data-backdrop="static"
+            data-keyboard="false"
+          >
+            <div class="modal-dialog" role="document">
+              <div class="modal-content" style="background: #02d4e3">
+                <div class="modal-header" style="border-bottom: none">
+                  <h5
+                    class="modal-title text-white font-weight-bold dur-model-title"
+                  >
+                    Enter Duration in Seconds
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body text-center text-white">
+                  <div class="row">
+                    <div class="col-md-8 mx-auto">
+                      <div class="input-group mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          placeholder="Enter Time in Second"
+                          id="manual_duration_time"
+                        />
+                        <div class="input-group-append">
+                          <button
+                            class="btn btn-primary font-weight-bold"
+                            id="manual_duration_submit"
+                          >
+                            SUBMIT
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="left-ad">Adsense Ad</div>
+      </div>
+      <div class="scorer">
+        <div class="score-1">
+          <h1>Top Scorers</h1>
+        </div>
+        <div class="score-2">
+          <div class="score-div-1">
+            <h1 id="record">World Record</h1>
+            <div class="name">
+              <h1>Misbah</h1>
+              <img class="flg_img" src="./images/pakistan.png" alt="" />
+            </div>
+            <img src="./images/profile.jpg" alt="" />
+            <h1>CPS</h1>
+          </div>
+          <div class="score-div-1">
+            <div class="name">
+              <h1>Misbah</h1>
+              <img class="flg_img" src="./images/turkey.png" alt="" />
+            </div>
+            <img src="./images/profile.jpg" alt="" />
+            <h1>CPS</h1>
+          </div>
+          <div class="score-div-1">
+            <div class="name">
+              <h1>Misbah</h1>
+              <img class="flg_img" src="./images/afghanistan.png" alt="" />
+            </div>
+            <img src="./images/profile.jpg" alt="" />
+            <h1>CPS</h1>
+          </div>
+          <div class="score-div-1">
+            <div class="name">
+              <h1>Misbah</h1>
+              <img
+                src="./images/iran.png"
+                alt=""
+                style="
+                  width: 30px;
+                  border-radius: 0px;
+                  height: 60px;
+                  object-fit: contain;
+                "
+              />
+            </div>
+            <img src="./images/profile.jpg" alt="" />
+            <h1>CPS</h1>
+          </div>
+        </div>
+        <div class="score-1 score-3">
+          <h1>What is Click per Second</h1>
+          <p>
+            Clickper Second is a gama that let you test your click speed. It is
+            Commenly Used by gamers as a click speed test or CPS
+          </p>
+          <br />
+          <p>
+            Clickper Second is a gama that let you test your click speed. It is
+            Commenly Used by gamers as a click speed test or CPS
+          </p>
+          <br />
+          <p>
+            Clickper Second is a gama that let you test your click speed. It is
+            Commenly Used by gamers as a click speed test or CPS
+          </p>
+          <br />
+          <p>
+            Clickper Second is a gama that let you test your click speed. It is
+            Commenly Used by gamers as a click speed test or CPS
+          </p>
+          <br />
+        </div>
+        <div class="score-4">
+          <h1>Adsense Ad</h1>
+        </div>
+      </div>
+      <footer>
+        <div class="top-footer">
+          <ul>
+            <li><a target="_blank" href="./index.html">Home</a></li>
+            <li><a target="_blank" href="./blog.html">Blog</a></li>
+            <li><a target="_blank" href="./about.html">About Us</a></li>
+            <li><a target="_blank" href="./contact.html">Contact Us</a></li>
+            <li>
+              <a target="_blank" href="./privacy_policy.html">Privacy Policy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="bottom-footer">
+          <a target="_blank"><i class="fab fa-facebook"></i></a>
+          <a target="_blank"><i class="fab fa-twitter"></i></a>
+          <a target="_blank"><i class="fab fa-instagram"></i></a>
+          <a target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </footer>
+
+      <div class="last">
+        <p>Copyright @2022 All rights reserved by cps-test.io</p>
+      </div>
+    </div>
+    <!-- ///////////////////////////////////////////// -->
+
+    <!-- script  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap files -->
+    <!-- <script src="./asjs/jquery.min.js"></script> -->
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <!-- For displaying Chat -->
+    <script src="./assets/js/chart.js"></script>
+    <!-- Main Script -->
+    <script src="./assets/js/cps-test.js"></script>
+    <!-- for loading page on selecting new time -->
+    <script
+      src="./assets/js/rocket-loader.min.js"
+      data-cf-settings="d9a9eff697cbe424e56c8c08-|49"
+      defer=""
+    ></script>
+    <!-- To manage sound -->
+    <script src="./assets/js/manage-settings.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/speed_test.js"></script>
+  </body>
+</html>

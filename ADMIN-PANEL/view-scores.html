@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View Scores</title>
+    <link rel="shortcut icon" href="./images/Favicon.png" type="image/x-icon" />
+
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <link rel="stylesheet" href="./assests/css/main-admin-style.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo-details">
+        <span class="logo_name"
+          ><a href="./add_blog.html"
+            ><img src="./images/logo.png" alt="" style="width: 175px" /> </a
+        ></span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="./view-blog.html"
+            ><i class="fas fa-blog"></i> <span class="link_name">Blog</span></a
+          >
+        </li>
+        <li>
+          <a href="./view-about.html"
+            ><i class="far fa-address-book"></i>
+            <span class="link_name">About</span></a
+          >
+        </li>
+        <li>
+          <a href="./intro.html"
+            ><i class="far fa-address-card"></i>
+            <span class="link_name">Introduction</span></a
+          >
+        </li>
+        <li>
+          <a href="./view-scores.html"
+            ><i class="far fa-eye"></i>
+            <span class="link_name">View Scores</span></a
+          >
+        </li>
+        <li>
+          <a href="./view-contact.html"
+            ><i class="far fa-eye"></i>
+            <span class="link_name">View Contact</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- ///////////////////////////////////////// -->
+
+    <div class="home-content">
+      <div class="toggle bx-menu1" onclick="myFunction()" id="toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <img src="./images/logo.png" alt="" id="logo" />
+      <div class="btns">
+        <a href="login.html"><button>LogOut</button></a>
+        <!-- <a href="register.html"><button>Register</button></a> -->
+      </div>
+    </div>
+    <!-- //////////////////////////// -->
+
+    <div class="view_blog">
+      <div class="title">
+        <h5><b>Scores</b></h5>
+      </div>
+      <table>
+        <thead>
+          <th>Username</th>
+          <th>Country</th>
+          <th>Scores</th>
+
+          <th>CPS</th>
+          <th>Time in Sec</th>
+          <th>Status</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Username">Ali Ahmed</td>
+            <td data-label="Country">Austria</td>
+            <td data-label="Scores">60</td>
+            <td data-label="CPS">26</td>
+            <td data-label="Time in Sec">10</td>
+            <td data-label="Status">
+              <select>
+                <option>Active</option>
+                <option>Pending</option>
+                <option>Disabled</option>
+              </select>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ///////////////////////////////////////////// -->
+
+    <!-- script  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./assests/js/admin-panel.js"></script>
+  </body>
+</html>
